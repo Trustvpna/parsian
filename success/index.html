@@ -1,0 +1,320 @@
+<?php
+
+
+$url = "./payment";
+
+
+?>
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تراست وی پی ان</title>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+</head>
+<style>
+    @import url('https://v1.fontapi.ir/css/Vazir');
+    @import url('https://v1.fontapi.ir/css/Jadid');
+
+    @font-face {
+        font-family: "KAJ";
+        src: url(./css/font/SGKara.ttf);
+    }
+
+    @font-face {
+        font-family: "MJ";
+        src: url(./css/font/Mjt.ttf);
+    }
+
+
+    * {
+        margin: 0;
+        padding: 0;
+        transition: all 1s;
+    }
+
+    body {
+        font-family: "KAJ";
+        background-color: #fff;
+    }
+
+    .header-img {
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 20px;
+        padding-bottom: 5px;
+        width: 100px;
+    }
+
+    .img-logo {
+        background-color: #43a7ff;
+        border-radius: 36px;
+        border-top-right-radius: 0;
+        border-top-left-radius: 0;
+    }
+
+    .text-header {
+        text-align: center;
+        font-size: 34px;
+        padding: 10px;
+        color: #fff;
+    }
+
+    .cadr1 {
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 2rem;
+        background-color: #43a7ff;
+        border-radius: 16px;
+        width: 90%;
+        padding: 15px;
+        color: #fff;
+        font-family: "KAJ";
+        flex-direction: column;
+    }
+
+    .card2 {
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 2rem;
+        background-color: #43a7ff;
+        border-radius: 16px;
+        width: 90%;
+        padding: 15px;
+        color: #fff;
+        font-family: "KAJ";
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        margin-bottom: 2rem;
+    }
+
+    .item {
+        display: flex;
+        border: 4px solid #fff;
+        border-radius: 12px;
+        padding: 10px;
+        margin: 0.5em;
+        padding: 0.5em;
+        width: 90%;
+        scroll-snap-align: end;
+        scroll-margin-inline: 0.5em;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .itemha {
+        display: flex;
+        width: 150px;
+        display: flex;
+        margin: 10px auto;
+        margin: 0.5em;
+        padding: 10px;
+        padding-top: 5rem;
+    }
+
+    .card2 {
+        overflow: auto;
+        scrollbar-width: none;
+        /* Firefox */
+        -ms-overflow-style: none;
+        /* IE 10+ */
+    }
+
+    .card2::-webkit-scrollbar {
+        width: 0px;
+        background: transparent;
+        /* Chrome/Safari/Webkit */
+    }
+
+    .card4 {
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 2rem;
+        background-color: #43a7ff;
+        border-radius: 16px;
+        width: 90%;
+        padding: 15px;
+        color: #fff;
+        font-family: "KAJ";
+        flex-direction: column;
+        margin-bottom: 2rem;
+    }
+
+    .speed {
+        width: 300px;
+        border-radius: 16px;
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .card3 {
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 2rem;
+        background-color: #43a7ff;
+        border-radius: 16px;
+        width: 90%;
+        padding: 15px;
+        color: #fff;
+        font-family: "KAJ";
+        flex-direction: column;
+        margin-bottom: 2rem;
+        text-align: right;
+        flex-direction: column;
+    }
+
+    .avali {
+        width: 80%;
+        height: 200px;
+        background-color: #fff;
+        border-radius: 16px;
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        padding: 10px 0px;
+        font-size: 20px;
+        color: #1a1a1a;
+        flex-direction: column;
+    }
+
+    .btn {
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        background-color: #fff;
+        color: #131313;
+        width: 90%;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        flex-direction: column;
+        height: 50px;
+        font-family: "KAJ";
+        border: 0px;
+        border-radius: 12px;
+        font-weight: bolder;
+        font-size:20px;
+    }
+
+    .end {
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+        height: 50px;
+        background-color: #43a7ff;
+        border-radius: 26px;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        color: #fff;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .rooz {
+        width: 100px;
+        height: 50px;
+        background-color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        border-radius: 12px;
+        margin-left: auto;
+        margin-right: auto;
+        color: #000;
+        margin-top: 1rem;
+    }
+    
+    @media only screen and (min-width: 768px) {
+        body{
+            max-width:500px;
+            display:flex;
+            flex-direction:column;
+            margin-left:auto;
+            margin-right:auto;
+        }
+}
+
+</style>
+
+<body>
+    <div class="img-logo">
+        <img class="header-img" src="./css/img/logo.png" alt="">
+        <div class="rooz" onclick="day()">
+            <p id="textday">روشن</p>
+        </div>
+        <p class="text-header">فیلتر شکن تراست  </p>
+    </div>
+    <div class="cadr1">
+        <p style="font-size: 19px;">خرید شما با موفقیت انجام شد</p>
+        <p>جهت استفاده از فیلترشکن اپلیکیشن زیر را نصب نمایید</p>
+        <p>پ . ن : راهنمای استفاده از فیلترشکن در اپلیکیشن قابل مشاهده است</p>
+        <h5>از خرید شما متشکریم</h5>
+        <button type="submit" class="animate__animated animate__slideInUp btn" onclick="gotohandler()">دریافت اپلیکیشن</button>
+    </div>
+    <div class="card2">
+        <p style="font-size: 19px;">نام کاربری شما : avpn1906</p>
+    </div>
+    <div class="card3">
+        <p style="font-size: 19px;">رمز عبور شما : 79653</p>
+    </div>
+
+    <script>
+        const cadr1 = document.querySelector(".cadr1")
+        const card2 = document.querySelector(".card2")
+        const card3 = document.querySelector(".card3")
+        const imglogo = document.querySelector(".img-logo")
+        const rooz = document.querySelector(".rooz")
+        var textday = document.querySelector("#textday")
+        var btn = document.querySelector(".btn")
+
+
+        function day() {
+            if(textday.innerHTML == "روشن"){
+            document.body.style.backgroundColor = "#000"
+            textday.innerHTML = "شب"
+            rooz.style.backgroundColor = "#000"
+            rooz.style.color = "#fff"
+            imglogo.style.backgroundColor = "#1a1a1a"
+            cadr1.style.backgroundColor = "#1a1a1a"
+            card2.style.backgroundColor = "#1a1a1a"
+            card3.style.backgroundColor = "#1a1a1a"
+            btn.style.backgroundColor = "#07d600"
+            }
+            else if (textday.innerHTML == "شب") {
+                document.body.style.backgroundColor = ""
+                textday.innerHTML = "روشن"
+                rooz.style.backgroundColor = ""
+                rooz.style.color = ""
+                imglogo.style.backgroundColor = ""
+                cadr1.style.backgroundColor = ""
+                card2.style.backgroundColor = ""
+                card3.style.backgroundColor = ""
+                btn.style.backgroundColor = ""
+            }
+        }
+
+        function gotohandler(){
+            window.location.href = "https://cdn.discordapp.com/attachments/1171616824232779827/1175819772475211816/TrustVPN-V1.3.apk?ex=656c9e7f&is=655a297f&hm=3c117099726350d9c74c748c1556d0ab28f62f12a21f96644bafd303d4fa66dd&"
+        }
+    </script>
+</body>
+
+</html>
